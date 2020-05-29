@@ -1,9 +1,9 @@
 const db = require('../models/database/db');
-db.Estudiante.update({
-nombres: 'cacas'
+db.Curso.update({
+nombre: 'Quimica'
 }, {
 where: {
-nombres: 'Jose'
+nombre: 'IA'
 
 }
 }).then((res) => {

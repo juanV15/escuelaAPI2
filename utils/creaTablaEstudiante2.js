@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize(
 	'escolar',
 	'backenduser',
-	'12345678',
+	'j0129sep15',
 	{
 		host: 'localhost',
 		dialect: 'mysql'

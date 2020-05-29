@@ -2,7 +2,7 @@ const db = require('../models/database/db');
 
 db.Estudiante.destroy({
 	where: {
-		creditosCursados: 350
+		matricula: 12
 	}
 }).
 then(res => {

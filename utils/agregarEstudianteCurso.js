@@ -2,13 +2,10 @@ const db = require('../models/database/db');
 
 
 
-db.Estudiante.create({
-    matricula: 1133679,
-    apellidoPaterno:'dani',
-    apellidoMaterno:'Lee',
-    nombres:'Juandd',
-    semestreIngreso:'2018',
-    creditosCursados: 247
+db.EstudianteCursos.create({
+    clave: 1234,
+    matricula: 11336
+ 
 }).then(() => {
     console.log('Estudiante creado');
 }).catch(err => {

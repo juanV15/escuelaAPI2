@@ -3,14 +3,11 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize(
     'escolar',
     'backenduser',
-    '12345678',
+    'j0129sep15',
     {
         host: 'localhost',
         dialect: 'mysql'
     });
-//
-// const jobModelEstudiante = {};
-// const jobModelCurso = {};
 
 //Modelo estudiante con atributos
 const Estudiante = sequelize.define('estudiante',{
@@ -57,13 +54,21 @@ const Curso = sequelize.define('curso',{
         defaultValue: 0
     }
 });
-// jobModelCurso.Curso = Curso;
-// jobModelEstudiante.Estudiante = Estudiante;
-// jobModelEstudiante.sequelize = sequelize;
-// jobModelEstudiante.Sequelize = Sequelize;
-// module.exports = jobModelEstudiante;
-// module.exports = jobModelCurso;
-// Estudiante.belongsToMany(Curso,{through:EstudianteCurso});
-// Curso.belongsToMany(Estudiante,{through:EstudianteCurso});
+
+const EstudianteCursos = sequelize.define('estudianteCursos',{
+	clave: {
+		type: Sequelize.INTEGER,
+		allowNull: false,
+		unique: false
+	} ,
+	matricula: {
+		type: Sequelize.INTEGER,
+		allowNull: false,
+		unique: false
+	} 
+	
+});
+
 exports.Estudiante=Estudiante;
 exports.Curso=Curso;
+exports.EstudianteCursos=EstudianteCursos;

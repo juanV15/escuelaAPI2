@@ -2,7 +2,7 @@ const db = require('../models/database/db');
 
 db.Curso.destroy({
 	where: {
-		clave: 2126
+		clave: 1133628
 	}
 }).
 then(res => {
