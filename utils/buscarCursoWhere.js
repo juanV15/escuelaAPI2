@@ -1,11 +1,13 @@
 const db = require('../models/database/db');
-db.Estudiante.findAll({
+db.Curso.findAll({
 	where: {
-		semestreIngreso: '2019',
-		matricula: 15
+        clave: 1133,
+		creditos: 8
+		
 	}
 }).
 then((res) => {
+
 	res.forEach( rec => {
 		console.log(rec.dataValues);
 	})

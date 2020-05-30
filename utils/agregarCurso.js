@@ -14,8 +14,8 @@ const db = require('../models/database/db');
 // });
 
 db.Curso.create({
-	nombre: 'Base de datos',
-	clave: 2126,
+	nombre: 'IA',
+	clave: 11336,
 	creditos: 8
 }).then(() => {
 	console.log('Curso creado');

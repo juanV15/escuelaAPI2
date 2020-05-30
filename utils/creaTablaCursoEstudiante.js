@@ -8,20 +8,17 @@ const sequelize = new Sequelize(
 		dialect: 'mysql'
 	});
 
-const Curso = sequelize.define('curso',{
-	nombre: {
-		type: Sequelize.STRING,
-		allowNull: false
-	},
+const EstudianteCursos = sequelize.define('estudianteCursos',{
 	clave: {
 		type: Sequelize.INTEGER,
 		allowNull: false,
-		unique: true
-	},
-	creditos: {
+		unique: false
+	} ,
+	matricula: {
 		type: Sequelize.INTEGER,
-		allowNull: true,
-		defaultValue: 0
-	}
+		allowNull: false,
+		unique: false
+	} 
+	
 });
-Curso.sync({ force: true});
+EstudianteCursos.sync({ force: true});
