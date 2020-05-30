@@ -71,7 +71,11 @@ function patch (req, res){
 //muestra cursosEstudiante
 function  getAllCursosEstudiante (req,res){
 		cursoModel.findAllCurso(req.params.clave).then((curso) =>{
+HEAD
 			res.status(200).json(curso);
+
+			res.status(200).json(req.body);
+c89c8e65b1e04b5b87a989b48c36cc370ec4f0b4
 				}).catch(err =>
 		{
 			res.status(500).send('No se encontraron Cursos');
